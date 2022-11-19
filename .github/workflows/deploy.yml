@@ -20,7 +20,9 @@ jobs:
           npm ci
           npx resumed render --theme kendall
           mkdir public
+          mkdir public/assets
           mv resume.html public/index.html
+          cp assets/* public/assets/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
